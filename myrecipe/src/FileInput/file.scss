@@ -1,0 +1,65 @@
+// Colors
+$bgcolor: #fafafa;
+$textcolor: #3b4043;
+$secondarycolor: #01937c;
+$fontFamily: "Bodoni MT";
+
+
+.image-preview {
+    max-width: 800px;
+}
+
+.image-progress {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.container {
+	width: calc(100% - 20px);
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 10px 5px;
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+// Laptop
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .image-preview {
+        max-width: 600px;
+    }
+}
+
+// Tablet
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-preview {
+        max-width: 600px;
+    }
+}
+
+// Large Phone
+@media (min-width: 600px) and (max-width: 768px) {
+    .image-preview {
+        max-width: 400px;
+    }
+}
+
+// Medium Phone
+@media (min-width: 468px) and (max-width: 559px) {
+    .image-preview {
+        max-width: 400px;
+    }
+}
+
+// Small Phone
+
+@media only screen and (max-width: 468px) {
+    .image-preview {
+        max-width: 220px;
+    }
+}

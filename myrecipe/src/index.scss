@@ -1,0 +1,21 @@
+// Colors
+$bgcolor: #fafafa;
+$textcolor: #3b4043;
+$secondarycolor: #01937c;
+
+// Font Size
+$largeSize: 50px;
+$mediumSize: 35px;
+$smallSize: 20px;
+
+// Cards Color 
+
+$cardsColors: #f4f4f3;
+
+
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $smallSize;
+}
+
