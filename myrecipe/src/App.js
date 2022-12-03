@@ -11,45 +11,32 @@ import { theme } from "./responsive.js";
 import { Responsive } from './Home/home.js'
 import { ThemeProvider } from "@mui/material";
 
+import { useRecipeContext } from './context/recipeContext';
+import { ClipLoader } from "react-spinners";
+
 import './index.scss'
 
 function App() {
 
-  /* 
-    Food ID - System Generated
-    Food Name - String
-    Food Author - String
-    Classification - String
-    Categories - String
-    Difficulty - String
-    Time - String
-    Rating - Array ( Rating/Click )
-    Ingredients - Array
-        -> Ingredients
-          -> Quantity
-          -> Ingredients Name
-    Steps - Array 
-    Image - String URL
+  const { loading } = useRecipeContext()
 
-    Authentication - Email and Password
-
-    Download and Create PDF 
-
-    IP Detection
-  */
-
-    
   return (
     <>
       <ThemeProvider theme={theme}>
         <Responsive>
-          <Routes>
-            <Route path="/*" element={<Home />} />
-            <Route path="/:classification/:id/:userId" element={<Cards />} />
-            <Route path="/edit/:classification/:id/:userId" element={<EditCards />} />
-            <Route path="/create" element={<CreateCards />} />
-            <Route path="/myprofile/:userId" element={<MyProfile />} />
-          </Routes>
+          {loading ?
+            <div className="loader">
+              <ClipLoader color="#01937c" size="70" />
+            </div>
+            :
+            <Routes>
+              <Route path="/*" element={<Home />} />
+              <Route path="/:classification/:id/:userId" element={<Cards />} />
+              <Route path="/edit/:classification/:id/:userId" element={<EditCards />} />
+              <Route path="/create" element={<CreateCards />} />
+              <Route path="/myprofile/:userId" element={<MyProfile />} />
+            </Routes>
+          }
         </Responsive>
       </ThemeProvider>
     </>
