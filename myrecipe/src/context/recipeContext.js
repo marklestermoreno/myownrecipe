@@ -247,7 +247,7 @@ export const RecipeContextProvider = ({ children }) => {
             setData(data.data)
             setTimeout(() => {
                 setLoading(false)
-            }, 2000)
+            }, 5000)
 
         }
         catch (error) {

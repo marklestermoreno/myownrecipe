@@ -51,11 +51,11 @@ const EditCards = ({ food }) => {
                             sx={{
                                 color: '#01937c'
                             }}>
-                            {"Delete Food Recipe"}
+                            {"Accept Pending Food Recipe"}
                         </DialogTitle>
                         <DialogContent>
                             <DialogContentText id="alert-dialog-description" >
-                                Do you really want to delete this recipe?  Type <span style={{ color: '#ef4444' }}> {food.foodName} </span> to delete
+                                Do you really want to accept this post publicly?  Type <span style={{ color: '#ef4444' }}> {food.foodName} </span> to accept for confirmation
                             </DialogContentText>
                             <DialogContentText id="alert-dialog-description" sx={{ marginTop: '20px' }}>
                                 <TextField

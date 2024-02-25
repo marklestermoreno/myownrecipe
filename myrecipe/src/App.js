@@ -12,7 +12,9 @@ import { Responsive } from './Home/home.js'
 import { ThemeProvider } from "@mui/material";
 
 import { useRecipeContext } from './context/recipeContext';
-import { ClipLoader } from "react-spinners";
+// import { ClipLoader } from "react-spinners";
+
+import LoadingAnimation from "./assets/Loading.gif"
 
 import './index.scss'
 
@@ -24,9 +26,11 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Responsive>
-          {loading ?
+          { loading ?
             <div className="loader">
-              <ClipLoader color="#01937c" size="70" />
+              {/* <ClipLoader color="#01937c" size="70" /> */}
+              <img src={LoadingAnimation} alt="loading-animation" className="loading-gif" />
+              <h4 className="text-loading"> <b> Tips: </b> Make sure to login to create, share and save recipes</h4>
             </div>
             :
             <Routes>
